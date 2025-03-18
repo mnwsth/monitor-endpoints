@@ -1,0 +1,6 @@
+requests==2.31.0
+schedule==1.2.0
+google-cloud-logging==3.5.0
+google-auth==2.22.0
+python-dotenv==1.0.0
+json5==0.9.14 

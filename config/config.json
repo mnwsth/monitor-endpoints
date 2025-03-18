@@ -1,0 +1,23 @@
+// This file uses JSON5 syntax
+{
+  "endpoints": [
+    {
+      "id": "google-homepage",
+      "url": "https://www.google.com",
+      "method": "GET",
+      "timeout_seconds": 5,
+      "success_status_codes": [200],
+    },
+    /*{
+      "id": "example-api",
+      "url": "https://api.example.com/health",
+      "method": "GET",
+      "timeout_seconds": 10,
+      "success_status_codes": [200, 201, 204],
+      "enabled": true,
+    }*/
+  ],
+  
+  "default_timeout_seconds": 30,
+  "default_success_status_codes": [200]
+} 

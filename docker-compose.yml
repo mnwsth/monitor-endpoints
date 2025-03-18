@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  endpoint-monitor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: endpoint-monitor
+    restart: unless-stopped
+    volumes:
+      - ./config:/app/config
+    env_file:
+      - .env
