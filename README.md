@@ -9,7 +9,7 @@ This service uses Docker Compose for easy deployment. Follow these steps to get 
 ### Prerequisites
 
 - Docker and Docker Compose installed
-- GCP service account with logging permissions (optional, for GCP logging)
+- GCP service account with logging permissions. 
 
 ### Configuration
 
@@ -18,7 +18,7 @@ This service uses Docker Compose for easy deployment. Follow these steps to get 
    - `config.json` - Configuration of endpoints to monitor (uses JSON5 format)
    - `gcp-keyfile.json` - GCP service account key (optional)
 
-2. **GCP Credentials (Optional)**:
+2. **GCP Credentials**:
    - Rename `config/gcp-keyfile.json.example` to `config/gcp-keyfile.json`
    - Fill it with your actual GCP service account credentials
 
@@ -68,8 +68,8 @@ The `config.json` file uses JSON5 format, which allows comments and other helpfu
 }
 ```
 
-### JSON5 Features
-This configuration supports JSON5 format, which includes:
+### JSON5 For Configuration Specification
+This configuration by default uses JSON5 format for configuration specification, which includes:
 - Comments (both line and block comments)
 - Trailing commas
 - Unquoted property names
@@ -83,6 +83,7 @@ To temporarily disable monitoring for an endpoint without removing it from the c
 1. Add `"enabled": false` to the endpoint object
 2. The service will skip disabled endpoints during checks
 3. To re-enable, either remove the "enabled" flag or set it to `true`
+Note: The container will have to restarted for these changes to take effect.
 
 ## Status Output Format
 
